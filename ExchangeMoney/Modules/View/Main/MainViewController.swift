@@ -27,7 +27,7 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeue() as CurrencyTableViewCell
-		cell.CellData(model: CurrencyModel(code: "USD",rate: 123.12))
+		cell.CellData(model: CurrencyModel(code: "USD",rate: 123.12,countryCode: "US"))
 		return cell
 	}
 	

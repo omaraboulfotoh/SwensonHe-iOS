@@ -9,13 +9,16 @@ import Foundation
 
 class CurrencyModel {
 	 var code: String?
+	var countryCode :String?
 	 var rate: Double?
 	
 	
 	init() {
 	}
-	init(code: String,rate: Double) {
+	
+	init(code: String,rate: Double,countryCode:String) {
 		self.code = code
+		self.countryCode = countryCode
 		self.rate = rate
 	}
 }

@@ -25,7 +25,7 @@ class CurrencyTableViewCell:UITableViewCell {
 	}
 	func CellData(model:CurrencyModel) {
 		currencyLabel?.text = "\(model.rate ?? 0.0)"
-		currencyName?.text = "\(countryFlag(countryCode: model.code!)) \(model.code ?? "USD")"
+		currencyName?.text = "\(countryFlag(countryCode: model.countryCode!)) \(model.code ?? "USD")"
 	}
 	
 	func countryFlag(countryCode: String) -> String {
