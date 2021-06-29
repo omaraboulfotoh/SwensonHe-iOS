@@ -1,0 +1,45 @@
+PODS:
+  - Alamofire (5.4.3)
+  - CryptoSwift (1.4.0)
+  - Kingfisher (6.3.0)
+  - Result (4.0.1)
+  - RxCocoa (4.5.0):
+    - RxSwift (>= 4.4.2, ~> 4.4)
+  - RxSwift (4.5.0)
+  - SwiftyJSON (4.3.0)
+  - Then (2.7.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - CryptoSwift
+  - Kingfisher
+  - Result (~> 4.0.0)
+  - RxCocoa (~> 4.0)
+  - RxSwift (~> 4.0)
+  - SwiftyJSON (~> 4.0)
+  - Then
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - CryptoSwift
+    - Kingfisher
+    - Result
+    - RxCocoa
+    - RxSwift
+    - SwiftyJSON
+    - Then
+
+SPEC CHECKSUMS:
+  Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
+  CryptoSwift: 7cc902df1784de3b389a387756c7d710f197730c
+  Kingfisher: 6c3df386db71d82c0817a429d2c9421a77396529
+  Result: a6e784bebf48b471d59cddc1adb81f41f678c487
+  RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
+  RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+  Then: acfe0be7e98221c6204e12f8161459606d5d822d
+
+PODFILE CHECKSUM: b19c077973a00a3fd4ec37430810e0f062e66931
+
+COCOAPODS: 1.10.0
