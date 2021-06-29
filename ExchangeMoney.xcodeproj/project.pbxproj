@@ -19,6 +19,8 @@
 		048873D1268AD76B0080353D /* tableView..ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048873D0268AD76B0080353D /* tableView..ext.swift */; };
 		048873D6268AD8B20080353D /* CurrencyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048873D4268AD8B20080353D /* CurrencyTableViewCell.swift */; };
 		048873D7268AD8B20080353D /* CurrencyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048873D5268AD8B20080353D /* CurrencyTableViewCell.xib */; };
+		048873DA268AD9380080353D /* ExchangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048873D9268AD9380080353D /* ExchangeViewController.swift */; };
+		048873DC268ADAEC0080353D /* CurrencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048873DB268ADAEC0080353D /* CurrencyModel.swift */; };
 		61D95A8C6047C2A53BFDBDE7 /* Pods_ExchangeMoneyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B076C7523046A8AD7F7C5B0B /* Pods_ExchangeMoneyTests.framework */; };
 		95A363C3B71113589861823F /* Pods_ExchangeMoney_ExchangeMoneyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25F711064D1890CF8F68801A /* Pods_ExchangeMoney_ExchangeMoneyUITests.framework */; };
 		E8A0729684729ABD6D4AFF51 /* Pods_ExchangeMoney.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F80D864C51F4C05EC6297B78 /* Pods_ExchangeMoney.framework */; };
@@ -60,6 +62,8 @@
 		048873D0268AD76B0080353D /* tableView..ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableView..ext.swift; sourceTree = "<group>"; };
 		048873D4268AD8B20080353D /* CurrencyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTableViewCell.swift; sourceTree = "<group>"; };
 		048873D5268AD8B20080353D /* CurrencyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrencyTableViewCell.xib; sourceTree = "<group>"; };
+		048873D9268AD9380080353D /* ExchangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeViewController.swift; sourceTree = "<group>"; };
+		048873DB268ADAEC0080353D /* CurrencyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyModel.swift; sourceTree = "<group>"; };
 		25F711064D1890CF8F68801A /* Pods_ExchangeMoney_ExchangeMoneyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExchangeMoney_ExchangeMoneyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C32FD957FAA1034F6F71C72 /* Pods-ExchangeMoney-ExchangeMoneyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExchangeMoney-ExchangeMoneyUITests.release.xcconfig"; path = "Target Support Files/Pods-ExchangeMoney-ExchangeMoneyUITests/Pods-ExchangeMoney-ExchangeMoneyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A22328631752C3D8EA65855A /* Pods-ExchangeMoney.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExchangeMoney.release.xcconfig"; path = "Target Support Files/Pods-ExchangeMoney/Pods-ExchangeMoney.release.xcconfig"; sourceTree = "<group>"; };
@@ -176,6 +180,7 @@
 		048873C7268AD4610080353D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				048873DB268ADAEC0080353D /* CurrencyModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -191,6 +196,7 @@
 		048873CB268AD6700080353D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				048873D8268AD91A0080353D /* Exchange */,
 				048873D2268AD85F0080353D /* Main */,
 				04142D1D268AD33500A0D64B /* Main.storyboard */,
 			);
@@ -245,6 +251,14 @@
 				048873D5268AD8B20080353D /* CurrencyTableViewCell.xib */,
 			);
 			path = CurrencyItem;
+			sourceTree = "<group>";
+		};
+		048873D8268AD91A0080353D /* Exchange */ = {
+			isa = PBXGroup;
+			children = (
+				048873D9268AD9380080353D /* ExchangeViewController.swift */,
+			);
+			path = Exchange;
 			sourceTree = "<group>";
 		};
 		19BB5081942A4D788BF9E366 /* Pods */ = {
@@ -501,6 +515,8 @@
 			files = (
 				048873CA268AD6310080353D /* AppDefinition.swift in Sources */,
 				04142D1C268AD33500A0D64B /* MainViewController.swift in Sources */,
+				048873DC268ADAEC0080353D /* CurrencyModel.swift in Sources */,
+				048873DA268AD9380080353D /* ExchangeViewController.swift in Sources */,
 				04142D18268AD33500A0D64B /* AppDelegate.swift in Sources */,
 				048873D1268AD76B0080353D /* tableView..ext.swift in Sources */,
 				048873D6268AD8B20080353D /* CurrencyTableViewCell.swift in Sources */,
@@ -682,7 +698,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = ExchangeMoney/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/ExchangeMoney/Core/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -701,7 +717,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = ExchangeMoney/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/ExchangeMoney/Core/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
