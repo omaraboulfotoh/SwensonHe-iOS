@@ -3,18 +3,22 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		04142D18268AD33500A0D64B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04142D17268AD33500A0D64B /* AppDelegate.swift */; };
 		04142D1A268AD33500A0D64B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04142D19268AD33500A0D64B /* SceneDelegate.swift */; };
-		04142D1C268AD33500A0D64B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04142D1B268AD33500A0D64B /* ViewController.swift */; };
+		04142D1C268AD33500A0D64B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04142D1B268AD33500A0D64B /* MainViewController.swift */; };
 		04142D1F268AD33500A0D64B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04142D1D268AD33500A0D64B /* Main.storyboard */; };
 		04142D21268AD33600A0D64B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04142D20268AD33600A0D64B /* Assets.xcassets */; };
 		04142D24268AD33600A0D64B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04142D22268AD33600A0D64B /* LaunchScreen.storyboard */; };
 		04142D2F268AD33600A0D64B /* ExchangeMoneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04142D2E268AD33600A0D64B /* ExchangeMoneyTests.swift */; };
 		04142D3A268AD33600A0D64B /* ExchangeMoneyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04142D39268AD33600A0D64B /* ExchangeMoneyUITests.swift */; };
+		048873CA268AD6310080353D /* AppDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048873C9268AD6310080353D /* AppDefinition.swift */; };
+		048873D1268AD76B0080353D /* tableView..ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048873D0268AD76B0080353D /* tableView..ext.swift */; };
+		048873D6268AD8B20080353D /* CurrencyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048873D4268AD8B20080353D /* CurrencyTableViewCell.swift */; };
+		048873D7268AD8B20080353D /* CurrencyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048873D5268AD8B20080353D /* CurrencyTableViewCell.xib */; };
 		61D95A8C6047C2A53BFDBDE7 /* Pods_ExchangeMoneyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B076C7523046A8AD7F7C5B0B /* Pods_ExchangeMoneyTests.framework */; };
 		95A363C3B71113589861823F /* Pods_ExchangeMoney_ExchangeMoneyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25F711064D1890CF8F68801A /* Pods_ExchangeMoney_ExchangeMoneyUITests.framework */; };
 		E8A0729684729ABD6D4AFF51 /* Pods_ExchangeMoney.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F80D864C51F4C05EC6297B78 /* Pods_ExchangeMoney.framework */; };
@@ -41,7 +45,7 @@
 		04142D14268AD33500A0D64B /* ExchangeMoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExchangeMoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04142D17268AD33500A0D64B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04142D19268AD33500A0D64B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		04142D1B268AD33500A0D64B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		04142D1B268AD33500A0D64B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		04142D1E268AD33500A0D64B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04142D20268AD33600A0D64B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04142D23268AD33600A0D64B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -52,6 +56,10 @@
 		04142D35268AD33600A0D64B /* ExchangeMoneyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExchangeMoneyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04142D39268AD33600A0D64B /* ExchangeMoneyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeMoneyUITests.swift; sourceTree = "<group>"; };
 		04142D3B268AD33600A0D64B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		048873C9268AD6310080353D /* AppDefinition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDefinition.swift; sourceTree = "<group>"; };
+		048873D0268AD76B0080353D /* tableView..ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableView..ext.swift; sourceTree = "<group>"; };
+		048873D4268AD8B20080353D /* CurrencyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTableViewCell.swift; sourceTree = "<group>"; };
+		048873D5268AD8B20080353D /* CurrencyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrencyTableViewCell.xib; sourceTree = "<group>"; };
 		25F711064D1890CF8F68801A /* Pods_ExchangeMoney_ExchangeMoneyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExchangeMoney_ExchangeMoneyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C32FD957FAA1034F6F71C72 /* Pods-ExchangeMoney-ExchangeMoneyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExchangeMoney-ExchangeMoneyUITests.release.xcconfig"; path = "Target Support Files/Pods-ExchangeMoney-ExchangeMoneyUITests/Pods-ExchangeMoney-ExchangeMoneyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A22328631752C3D8EA65855A /* Pods-ExchangeMoney.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExchangeMoney.release.xcconfig"; path = "Target Support Files/Pods-ExchangeMoney/Pods-ExchangeMoney.release.xcconfig"; sourceTree = "<group>"; };
@@ -126,13 +134,13 @@
 		04142D16268AD33500A0D64B /* ExchangeMoney */ = {
 			isa = PBXGroup;
 			children = (
-				04142D17268AD33500A0D64B /* AppDelegate.swift */,
-				04142D19268AD33500A0D64B /* SceneDelegate.swift */,
-				04142D1B268AD33500A0D64B /* ViewController.swift */,
-				04142D1D268AD33500A0D64B /* Main.storyboard */,
+				048873CF268AD7460080353D /* Extensions */,
+				048873CE268AD6F60080353D /* Core */,
+				048873C8268AD6130080353D /* Const */,
+				048873C7268AD4610080353D /* Models */,
+				048873C6268AD4300080353D /* Modules */,
 				04142D20268AD33600A0D64B /* Assets.xcassets */,
 				04142D22268AD33600A0D64B /* LaunchScreen.storyboard */,
-				04142D25268AD33600A0D64B /* Info.plist */,
 			);
 			path = ExchangeMoney;
 			sourceTree = "<group>";
@@ -155,6 +163,90 @@
 			path = ExchangeMoneyUITests;
 			sourceTree = "<group>";
 		};
+		048873C6268AD4300080353D /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				048873CD268AD67E0080353D /* Navigation */,
+				048873CC268AD6770080353D /* ViewModel */,
+				048873CB268AD6700080353D /* View */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		048873C7268AD4610080353D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		048873C8268AD6130080353D /* Const */ = {
+			isa = PBXGroup;
+			children = (
+				048873C9268AD6310080353D /* AppDefinition.swift */,
+			);
+			path = Const;
+			sourceTree = "<group>";
+		};
+		048873CB268AD6700080353D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				048873D2268AD85F0080353D /* Main */,
+				04142D1D268AD33500A0D64B /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		048873CC268AD6770080353D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		048873CD268AD67E0080353D /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		048873CE268AD6F60080353D /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				04142D17268AD33500A0D64B /* AppDelegate.swift */,
+				04142D19268AD33500A0D64B /* SceneDelegate.swift */,
+				04142D25268AD33600A0D64B /* Info.plist */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		048873CF268AD7460080353D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				048873D0268AD76B0080353D /* tableView..ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		048873D2268AD85F0080353D /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				048873D3268AD8820080353D /* CurrencyItem */,
+				04142D1B268AD33500A0D64B /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		048873D3268AD8820080353D /* CurrencyItem */ = {
+			isa = PBXGroup;
+			children = (
+				048873D4268AD8B20080353D /* CurrencyTableViewCell.swift */,
+				048873D5268AD8B20080353D /* CurrencyTableViewCell.xib */,
+			);
+			path = CurrencyItem;
+			sourceTree = "<group>";
+		};
 		19BB5081942A4D788BF9E366 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -165,7 +257,6 @@
 				B7FF213B49B9ED0CCD24C161 /* Pods-ExchangeMoneyTests.debug.xcconfig */,
 				F52811998BF5DCDDEC82FEBF /* Pods-ExchangeMoneyTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -277,6 +368,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				048873D7268AD8B20080353D /* CurrencyTableViewCell.xib in Resources */,
 				04142D24268AD33600A0D64B /* LaunchScreen.storyboard in Resources */,
 				04142D21268AD33600A0D64B /* Assets.xcassets in Resources */,
 				04142D1F268AD33500A0D64B /* Main.storyboard in Resources */,
@@ -407,8 +499,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04142D1C268AD33500A0D64B /* ViewController.swift in Sources */,
+				048873CA268AD6310080353D /* AppDefinition.swift in Sources */,
+				04142D1C268AD33500A0D64B /* MainViewController.swift in Sources */,
 				04142D18268AD33500A0D64B /* AppDelegate.swift in Sources */,
+				048873D1268AD76B0080353D /* tableView..ext.swift in Sources */,
+				048873D6268AD8B20080353D /* CurrencyTableViewCell.swift in Sources */,
 				04142D1A268AD33500A0D64B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
