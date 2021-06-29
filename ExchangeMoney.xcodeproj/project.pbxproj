@@ -21,6 +21,7 @@
 		048873D7268AD8B20080353D /* CurrencyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048873D5268AD8B20080353D /* CurrencyTableViewCell.xib */; };
 		048873DA268AD9380080353D /* ExchangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048873D9268AD9380080353D /* ExchangeViewController.swift */; };
 		048873DC268ADAEC0080353D /* CurrencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048873DB268ADAEC0080353D /* CurrencyModel.swift */; };
+		048873E1268ADCD60080353D /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048873E0268ADCD60080353D /* APIService.swift */; };
 		61D95A8C6047C2A53BFDBDE7 /* Pods_ExchangeMoneyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B076C7523046A8AD7F7C5B0B /* Pods_ExchangeMoneyTests.framework */; };
 		95A363C3B71113589861823F /* Pods_ExchangeMoney_ExchangeMoneyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25F711064D1890CF8F68801A /* Pods_ExchangeMoney_ExchangeMoneyUITests.framework */; };
 		E8A0729684729ABD6D4AFF51 /* Pods_ExchangeMoney.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F80D864C51F4C05EC6297B78 /* Pods_ExchangeMoney.framework */; };
@@ -64,6 +65,7 @@
 		048873D5268AD8B20080353D /* CurrencyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrencyTableViewCell.xib; sourceTree = "<group>"; };
 		048873D9268AD9380080353D /* ExchangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeViewController.swift; sourceTree = "<group>"; };
 		048873DB268ADAEC0080353D /* CurrencyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyModel.swift; sourceTree = "<group>"; };
+		048873E0268ADCD60080353D /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		25F711064D1890CF8F68801A /* Pods_ExchangeMoney_ExchangeMoneyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExchangeMoney_ExchangeMoneyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C32FD957FAA1034F6F71C72 /* Pods-ExchangeMoney-ExchangeMoneyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExchangeMoney-ExchangeMoneyUITests.release.xcconfig"; path = "Target Support Files/Pods-ExchangeMoney-ExchangeMoneyUITests/Pods-ExchangeMoney-ExchangeMoneyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A22328631752C3D8EA65855A /* Pods-ExchangeMoney.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExchangeMoney.release.xcconfig"; path = "Target Support Files/Pods-ExchangeMoney/Pods-ExchangeMoney.release.xcconfig"; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 		04142D16268AD33500A0D64B /* ExchangeMoney */ = {
 			isa = PBXGroup;
 			children = (
+				048873DF268ADCA60080353D /* Service */,
 				048873CF268AD7460080353D /* Extensions */,
 				048873CE268AD6F60080353D /* Core */,
 				048873C8268AD6130080353D /* Const */,
@@ -259,6 +262,14 @@
 				048873D9268AD9380080353D /* ExchangeViewController.swift */,
 			);
 			path = Exchange;
+			sourceTree = "<group>";
+		};
+		048873DF268ADCA60080353D /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				048873E0268ADCD60080353D /* APIService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		19BB5081942A4D788BF9E366 /* Pods */ = {
@@ -520,6 +531,7 @@
 				04142D18268AD33500A0D64B /* AppDelegate.swift in Sources */,
 				048873D1268AD76B0080353D /* tableView..ext.swift in Sources */,
 				048873D6268AD8B20080353D /* CurrencyTableViewCell.swift in Sources */,
+				048873E1268ADCD60080353D /* APIService.swift in Sources */,
 				04142D1A268AD33500A0D64B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

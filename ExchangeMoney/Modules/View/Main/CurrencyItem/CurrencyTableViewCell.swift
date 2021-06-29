@@ -11,7 +11,7 @@ class CurrencyTableViewCell:UITableViewCell {
 	
 	@IBOutlet weak var currencyLabel: UILabel!
 	@IBOutlet weak var currencyName: UILabel!
-	@IBOutlet weak var currencyImage: UIImageView!
+   
 	
 	override func awakeFromNib() {
 		super.awakeFromNib()
@@ -23,9 +23,14 @@ class CurrencyTableViewCell:UITableViewCell {
 		
 		// Configure the view for the selected state
 	}
-	func CellData() {
-		currencyLabel?.text = "10"
-		currencyName?.text = "USD"
-		currencyImage.image = UIImage(named: "currency-1")
+	func CellData(model:CurrencyModel) {
+		currencyLabel?.text = "\(model.rate ?? 0.0)"
+		currencyName?.text = "\(countryFlag(countryCode: model.code!)) \(model.code ?? "USD")"
+	}
+	
+	func countryFlag(countryCode: String) -> String {
+	  return String(String.UnicodeScalarView(
+		 countryCode.unicodeScalars.compactMap(
+		   { UnicodeScalar(127397 + $0.value) })))
 	}
 }

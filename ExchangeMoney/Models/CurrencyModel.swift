@@ -6,3 +6,16 @@
 //
 
 import Foundation
+
+class CurrencyModel {
+	 var code: String?
+	 var rate: Double?
+	
+	
+	init() {
+	}
+	init(code: String,rate: Double) {
+		self.code = code
+		self.rate = rate
+	}
+}

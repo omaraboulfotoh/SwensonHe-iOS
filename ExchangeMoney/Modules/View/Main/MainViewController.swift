@@ -11,12 +11,12 @@ class MainViewController: UIViewController {
 	
 	@IBOutlet weak var imageHeader: UIImageView!
 	@IBOutlet weak var tableView: UITableView!
+	
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		tableView.registerCellNib(cellClass: CurrencyTableViewCell.self)
 	}
-	
-	
 }
 
 extension MainViewController: UITableViewDataSource, UITableViewDelegate {
@@ -27,7 +27,7 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeue() as CurrencyTableViewCell
-		cell.CellData()
+		cell.CellData(model: CurrencyModel(code: "USD",rate: 123.12))
 		return cell
 	}
 	
