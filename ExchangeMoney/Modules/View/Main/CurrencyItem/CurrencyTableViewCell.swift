@@ -23,14 +23,9 @@ class CurrencyTableViewCell:UITableViewCell {
 		
 		// Configure the view for the selected state
 	}
-	func CellData(model:CurrencyModel) {
+	func CellData(model:Currency) {
 		currencyLabel?.text = "\(model.rate ?? 0.0)"
-		currencyName?.text = "\(countryFlag(countryCode: model.countryCode!)) \(model.code ?? "USD")"
+		currencyName?.text = model.code
 	}
 	
-	func countryFlag(countryCode: String) -> String {
-	  return String(String.UnicodeScalarView(
-		 countryCode.unicodeScalars.compactMap(
-		   { UnicodeScalar(127397 + $0.value) })))
-	}
 }

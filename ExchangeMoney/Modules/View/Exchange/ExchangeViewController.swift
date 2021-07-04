@@ -19,7 +19,16 @@ class ExchangeViewController: UIViewController {
 		errorLabel.isHidden = true
 		currencyTF.delegate = self
 	}
+	var model : Currency
 	
+	init(model: Currency) {
+		self.model = model
+		super.init(nibName: nil, bundle: nil)
+	}
+	
+	required init?(coder aDecoder: NSCoder) {
+		fatalError()
+	}
 }
 extension ExchangeViewController: UITextFieldDelegate {
 	func textFieldDidBeginEditing(_ textField: UITextField) {
@@ -31,7 +40,7 @@ extension ExchangeViewController: UITextFieldDelegate {
 	}
 	func textFieldShouldReturn(_ textField: UITextField) -> Bool {
 		DispatchQueue.main.async {
-			self.resultLabel.text = "\(self.currencyTF.text!)  USD"
+			self.resultLabel.text = "\(self.currencyTF.text!)  EUR"
 		}
 		return true
 	}
