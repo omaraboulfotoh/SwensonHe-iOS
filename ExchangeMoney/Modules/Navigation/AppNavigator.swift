@@ -12,17 +12,20 @@ import UIKit
 class AppNavigator {
 	
 	private let navigationController: UINavigationController?
- 
- init(_ navigationController: UINavigationController?) {
-	 self.navigationController = navigationController
- }
- 
- // MARK: - Internal Method
- 
- func startExchange(model: Currency) {
-	 let controller = ExchangeViewController(model: model)
-	 navigationController?.show(controller, sender: nil)
- }
- 
+	
+	init(_ navigationController: UINavigationController?) {
+		self.navigationController = navigationController
+	}
+	
+	// MARK: - Internal Method
+	
+	func startExchange(model: Currency) {
+		
+		let vc = UIStoryboard.init(name: "Main" , bundle: Bundle.main).instantiateViewController(withIdentifier: "DetailViewController") as? ExchangeViewController
+		
+		vc!.model = model
+		navigationController?.show(vc!, sender: nil)
+	}
+	
 }
 

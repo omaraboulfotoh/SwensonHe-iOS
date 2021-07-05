@@ -6,12 +6,15 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class MainViewController: UIViewController {
 	
 	@IBOutlet weak var imageHeader: UIImageView!
 	@IBOutlet weak var tableView: UITableView!
-   r
+	var  viewModel : CurrencyViewModel!
+	private let bag = DisposeBag()
 	
 	
 	var list = [Currency]()
@@ -20,41 +23,34 @@ class MainViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		let viewModel = CurrencyViewModel(list: list,navigator: .init(self.navigationController))
+		 viewModel = CurrencyViewModel(list: list,navigator: .init(self.navigationController))
 		
 		tableView.registerCellNib(cellClass: CurrencyTableViewCell.self)
 		
-		viewModel.items.bind { (items) in
-			self.list = items
-			self.tableView.reloadData()
-		  }
-		
+
+		bindTableData()
+	}
+	
+	func bindTableData() {
+		// bind items to tableView
+		viewModel.items.bind(to: tableView.rx.items(cellIdentifier: "CurrencyTableViewCell", cellType: CurrencyTableViewCell.self)) { row, model, cell in
+			cell.CellData(model: model)
+		}.disposed(by: bag)
+		// bind model selected
+		tableView.rx.modelSelected(Currency.self).bind { result in
+			self.viewModel.startExchange(currrency: result)
+			
+		}.disposed(by: bag)
+		// fetch items
 		viewModel.getList()
 	}
 		
 }
 
-extension MainViewController: UITableViewDataSource, UITableViewDelegate {
-	
-	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		list.count
-	}
-	
-	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell = tableView.dequeue() as CurrencyTableViewCell
-		cell.CellData(model: list[indexPath.row])
-		return cell
-	}
-	
-	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		tableView.deselectRow(at: indexPath, animated: true)
-		
-		
-		let vc = UIStoryboard.init(name: "Main" , bundle: Bundle.main).instantiateViewController(withIdentifier: "DetailViewController") as? ExchangeViewController
-		vc?.hidesBottomBarWhenPushed = true
-		navigationController?.pushViewController(vc!, animated: true)
-	}
-	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-		return 90
-	}
-}
+//extension MainViewController:  UITableViewDelegate {
+//	
+//	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//		return 90
+//	}
+//	
+//}

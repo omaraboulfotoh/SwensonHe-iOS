@@ -9,38 +9,39 @@ import UIKit
 
 class ExchangeViewController: UIViewController {
 	
-	@IBOutlet weak var errorView: UIView!
-	@IBOutlet weak var errorLabel: UILabel!
+	
 	@IBOutlet weak var currencyTF: UITextField!
 	@IBOutlet weak var resultLabel: UILabel!
+	
+	var model = Currency()
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		errorView.alpha = 0
-		errorLabel.isHidden = true
 		currencyTF.delegate = self
-	}
-	var model : Currency
-	
-	init(model: Currency) {
-		self.model = model
-		super.init(nibName: nil, bundle: nil)
+		self.resultLabel.text = "\( self.model.rate!)    \(self.model.code ?? "") "
 	}
 	
-	required init?(coder aDecoder: NSCoder) {
-		fatalError()
-	}
+	
+	
 }
 extension ExchangeViewController: UITextFieldDelegate {
 	func textFieldDidBeginEditing(_ textField: UITextField) {
+		
 	}
+	
 	func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-		errorView.alpha = 1
-		errorLabel.isHidden = false
+		
 		return true
 	}
 	func textFieldShouldReturn(_ textField: UITextField) -> Bool {
 		DispatchQueue.main.async {
-			self.resultLabel.text = "\(self.currencyTF.text!)  EUR"
+			if (!self.currencyTF.text!.isEmpty){
+				let number  = Double(self.currencyTF.text!)
+				
+				self.resultLabel.text = "\(number! * self.model.rate!)   \(self.model.code ?? "") "
+			}else{
+				self.resultLabel.text =  "  \(self.model.code ?? "") "
+			}
 		}
 		return true
 	}

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0408CEC826939C990065B155 /* Anagrams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0408CEC726939C990065B155 /* Anagrams.swift */; };
+		0408CECA26939D460065B155 /* Fibonacci.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0408CEC926939D460065B155 /* Fibonacci.swift */; };
 		040C569A268F9FD000F721B8 /* AFsession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040C5699268F9FD000F721B8 /* AFsession.swift */; };
 		040C569C268F9FF400F721B8 /* EventLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040C569B268F9FF400F721B8 /* EventLogger.swift */; };
 		040C569E268FA04500F721B8 /* RequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040C569D268FA04500F721B8 /* RequestRouter.swift */; };
@@ -52,6 +54,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0408CEC726939C990065B155 /* Anagrams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anagrams.swift; sourceTree = "<group>"; };
+		0408CEC926939D460065B155 /* Fibonacci.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fibonacci.swift; sourceTree = "<group>"; };
 		040C5699268F9FD000F721B8 /* AFsession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFsession.swift; sourceTree = "<group>"; };
 		040C569B268F9FF400F721B8 /* EventLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventLogger.swift; sourceTree = "<group>"; };
 		040C569D268FA04500F721B8 /* RequestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestRouter.swift; sourceTree = "<group>"; };
@@ -129,6 +133,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		0408CEC626939C5D0065B155 /* problems */ = {
+			isa = PBXGroup;
+			children = (
+				0408CEC726939C990065B155 /* Anagrams.swift */,
+				0408CEC926939D460065B155 /* Fibonacci.swift */,
+			);
+			path = problems;
+			sourceTree = "<group>";
+		};
 		04142D0B268AD33500A0D64B = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +167,7 @@
 		04142D16268AD33500A0D64B /* ExchangeMoney */ = {
 			isa = PBXGroup;
 			children = (
+				0408CEC626939C5D0065B155 /* problems */,
 				048873DF268ADCA60080353D /* Service */,
 				048873CF268AD7460080353D /* Extensions */,
 				048873CE268AD6F60080353D /* Core */,
@@ -547,6 +561,7 @@
 			files = (
 				048873CA268AD6310080353D /* AppDefinition.swift in Sources */,
 				048403532691593E007F8259 /* Observable.swift in Sources */,
+				0408CECA26939D460065B155 /* Fibonacci.swift in Sources */,
 				040C56A4268FA51300F721B8 /* CurrencyViewModel.swift in Sources */,
 				04142D1C268AD33500A0D64B /* MainViewController.swift in Sources */,
 				040C569C268F9FF400F721B8 /* EventLogger.swift in Sources */,
@@ -559,6 +574,7 @@
 				040C56A0268FA2D600F721B8 /* CurrencyModel.swift in Sources */,
 				040C569E268FA04500F721B8 /* RequestRouter.swift in Sources */,
 				048873D6268AD8B20080353D /* CurrencyTableViewCell.swift in Sources */,
+				0408CEC826939C990065B155 /* Anagrams.swift in Sources */,
 				048873E1268ADCD60080353D /* APIService.swift in Sources */,
 				04142D1A268AD33500A0D64B /* SceneDelegate.swift in Sources */,
 			);

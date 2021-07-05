@@ -6,22 +6,23 @@
 //
 
 import Foundation
-
+import RxSwift
+import RxCocoa
 
 protocol CurrencyViewModelProtocol {
 	
-	var items: Observable<[Currency]> { get  set }
+	var items: PublishSubject<[Currency]> { get  set }
 	
 	func getList()
 }
 
 class CurrencyViewModel: CurrencyViewModelProtocol {
 	
-	var items: Observable<[Currency]>
+	var items = PublishSubject<[Currency]>()
 	private let navigator: AppNavigator
 	
 	init(list : [Currency],navigator: AppNavigator) {
-		items = Observable(list)
+		
 		self.navigator = navigator
 	}
 	
@@ -32,7 +33,9 @@ class CurrencyViewModel: CurrencyViewModelProtocol {
 				list.append(Currency(code: key,rate: value))
 			}
 			
-			self?.items = Observable(list)
+			self?.items.onNext(list)
+			self?.items.onCompleted()
+			
 		}
 		
 		
